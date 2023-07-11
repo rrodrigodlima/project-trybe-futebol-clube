@@ -1,9 +1,9 @@
-import ITeam from './ITeam';
+import { Team } from './Team';
 import ITeamModel from './ITeamModel';
 import ITeamService from './ITeamService';
 
 export {
-  ITeam,
+  Team,
   ITeamModel,
   ITeamService,
 };

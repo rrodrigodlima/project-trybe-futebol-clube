@@ -1,7 +1,7 @@
 import { ServiceResponse } from '../ServiceResponse';
-import ITeam from './ITeam';
+import { Team } from './Team';
 
 export default interface ITeamService {
-  getAll(): Promise<ServiceResponse<ITeam[]>>;
-  getById(id: ITeam['id']): Promise<ServiceResponse<ITeam | null>>;
+  getAll(): Promise<ServiceResponse<Team[]>>;
+  getById(id: Team['id']): Promise<ServiceResponse<Team | null>>;
 }

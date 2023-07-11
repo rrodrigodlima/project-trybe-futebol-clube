@@ -1,4 +1,4 @@
-export default interface IMatch {
+export type Match = {
   id: number;
   homeTeamId: number;
   homeTeamGoals: number;
@@ -7,4 +7,4 @@ export default interface IMatch {
   inProgress: boolean;
   homeTeam?: { teamName: string },
   awayTeam?: { teamName: string },
-}
+};

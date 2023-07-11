@@ -1,6 +1,6 @@
-import ITeam from './ITeam';
+import { Team } from './Team';
 
 export default interface ITeamModel {
-  findAll(): Promise<ITeam[]>;
-  findById(id: ITeam['id']): Promise<ITeam | null>;
+  findAll(): Promise<Team[]>;
+  findById(id: Team['id']): Promise<Team | null>;
 }
