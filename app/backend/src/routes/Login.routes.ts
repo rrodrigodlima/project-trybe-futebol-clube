@@ -14,4 +14,10 @@ router.post(
   },
 );
 
+router.get(
+  '/role',
+  Validations.token,
+  UserController.role,
+);
+
 export default router;

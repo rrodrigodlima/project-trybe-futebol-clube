@@ -3,6 +3,7 @@ import * as chai from 'chai';
 // @ts-ignore
 import chaiHttp = require('chai-http');
 import { app } from '../app';
+import SequelizeUser from '../database/models/SequelizeUser';
 
 chai.use(chaiHttp);
 
@@ -37,5 +38,21 @@ describe('Login Tests', () => {
     }));
     expect(status).to.be.equal(401);
     expect(body).to.be.deep.equal({ message: 'Invalid email or password' });
+  });
+  it('return token if have success', async () => {
+    const mock = SequelizeUser.build({
+      id: 1,
+      username: 'Rodrigo',
+      role: 'user',
+      email: 'rodrigo@trybe.com',
+      password: '123456789',
+    });
+    sinon.stub(SequelizeUser, 'findOne').resolves(mock);
+    const { status, body } = (await chai.request(app).post('/login').send({
+      email: 'rodrigo@trybe.com',
+      password: '123456789',
+    }));
+    expect(status).to.be.equal(200);
+    expect(body).not.to.be.undefined;
   });
 });

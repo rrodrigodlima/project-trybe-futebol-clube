@@ -10,4 +10,8 @@ export default class UserService implements IUserService {
     const token = await this.tokenService.generateToken(user);
     return { status: 'SUCCESSFUL', data: { token } };
   }
+
+  static role(user: User): ServiceResponse<{ role: User['role'] }> {
+    return { status: 'SUCCESSFUL', data: { role: user.role } };
+  }
 }
