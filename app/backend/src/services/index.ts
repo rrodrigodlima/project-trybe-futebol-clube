@@ -3,6 +3,7 @@ import UserService from './UserService';
 import TokenService from './TokenService';
 import CryptService from './CryptService';
 import MatchService from './MatchService';
+import LeaderboardService from './LeaderboardService';
 
 export {
   TeamService,
@@ -10,4 +11,5 @@ export {
   TokenService,
   CryptService,
   MatchService,
+  LeaderboardService,
 };

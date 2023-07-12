@@ -69,8 +69,40 @@ const newMatch = {
   "inProgress": false
 };
 
+const finishedMatches = [
+  { dataValues: {
+    "id": 1,
+    "homeTeamId": 2,
+    "homeTeamGoals": 1,
+    "awayTeamId": 1,
+    "awayTeamGoals": 2,
+    "inProgress": false,
+    "homeTeam": {
+      "teamName": "Inter"
+    },
+    "awayTeam": {
+      "teamName": "Manchester"
+    }}
+  },
+  { dataValues: {
+    "id": 2,
+    "homeTeamId": 3,
+    "homeTeamGoals": 1,
+    "awayTeamId": 3,
+    "awayTeamGoals": 1,
+    "inProgress": false,
+    "homeTeam": {
+      "teamName": "Real Madrid"
+    },
+    "awayTeam": {
+      "teamName": "Boca Juniors"
+    }}
+  },
+];
+
 export default {
   matches,
   matchesData,
   newMatch,
+  finishedMatches,
 }
