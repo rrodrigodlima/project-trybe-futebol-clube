@@ -1,6 +1,6 @@
-import { FullMatch, ResumeMatch, TeamData } from '../interfaces/Leaderboard';
+import { FMatch, ResumeMatch, TeamData } from '../interfaces/Leaderboard';
 
-function resumeMatch(matches: FullMatch[], home: boolean): ResumeMatch[] {
+function resumeMatch(matches: FMatch[], home: boolean): ResumeMatch[] {
   return matches
     .map(({ homeTeamId, awayTeamId, homeTeamGoals, awayTeamGoals, homeTeam, awayTeam }) => ({
       id: home ? homeTeamId : awayTeamId,
@@ -19,7 +19,7 @@ function getPoints(victory: boolean, draw: boolean): number {
   return 0;
 }
 
-export function formatMatch(matches: FullMatch[], home: boolean): TeamData[] {
+export function formatMatch(matches: FMatch[], home: boolean): TeamData[] {
   const resume = home ? resumeMatch(matches, true) : resumeMatch(matches, false);
   const splittedTeams = [...new Set(resume.map(({ id }) => id))]
     .map((id) => resume.filter((match) => match.id === id));
