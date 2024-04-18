@@ -183,4 +183,4 @@ O projeto é dividido em quatro fluxos principais: Teams (Times), Users e Login 
 
 O TFC foi um projeto desafiador que envolveu a integração de diversos componentes para fornecer uma plataforma informativa sobre futebol. 
 
-Se houver alguma dúvida ou problema sobre o desenvolvimento, não hesite em entrar em contato.
+Se houver alguma dúvida sobre o desenvolvimento, não hesite em entrar em contato.
