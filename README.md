@@ -29,6 +29,13 @@ O TFC é um projeto desenvolvido como parte de um desafio. Ele consiste em uma A
 
 - Docker Compose para integração de serviços
 
+#### Execução do Projeto
+
+1. Clone o repositório do projeto.
+2. Navegue até o diretório raiz do projeto.
+3. Execute o comando `npm run compose:up` para subir todos os serviços conteinerizados.
+4. O projeto estará disponível em [http://localhost:3000](http://localhost:3000) para o front-end e [http://localhost:3001](http://localhost:3001) para o back-end.
+
 ## Requisitos do Projeto
 
 O projeto é dividido em quatro fluxos principais: Teams (Times), Users e Login (Pessoas Usuárias e Credenciais de Acesso), Matches (Partidas) e Leaderboards (Placares).
@@ -170,3 +177,10 @@ O projeto é dividido em quatro fluxos principais: Teams (Times), Users e Login 
     - Retorna classificação geral dos times.
     - Não considera partidas em andamento.
     - Atualização da tabela ao inserir partida.
+
+
+#### Considerações Finais
+
+O TFC foi um projeto desafiador que envolveu a integração de diversos componentes para fornecer uma plataforma informativa sobre futebol. 
+
+Se houver alguma dúvida ou problema sobre o desenvolvimento, não hesite em entrar em contato.
